@@ -17,7 +17,6 @@ pipeline {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerHub')
                         dockerapp.push('latest')
                         dockerapp.push("${env.BUILD_ID}")
-                    }
                 }
             }
 
